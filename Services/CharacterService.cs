@@ -18,7 +18,6 @@ namespace api.Services
             var characterModel = CharacterMapper.CreateCharacterFromDto(createCharacterDto);
             await _context.Characters.AddAsync(characterModel);
             await _context.SaveChangesAsync();
-            System.Console.WriteLine("nw character- ", characterModel);
             return characterModel;
         }
 
